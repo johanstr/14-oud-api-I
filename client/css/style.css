@@ -61,7 +61,7 @@ table.currency-table tr td img {
 
 option img {
     height: 10px;
-    widht: 10px;
+    width: 10px;
 }
 
 h3 {
@@ -93,4 +93,18 @@ select, input {
 
 .calc-value {
     margin-top: 40px;
+}
+
+.currency-symbol {
+    font-size: 9px;
+    font-style: italic;
+}
+
+.table-column-description {
+    font-size: 9px;
+    font-style: italic;
+}
+
+.currency-table tbody tr:first-child td {
+    border-top: 1px solid deepskyblue;
 }
