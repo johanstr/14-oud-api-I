@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency API - Client</title>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h4>Currency API Client</h4>
+        </header>
+
+        <main>
+            <!-- Eerste kolom met functionaliteit -->
+            <section class="column-1">
+                <!-- Koers van een valuta binnenhalen -->
+                <div class="row row-1">
+                    <h3>Koers</h3>
+                    <select id="valuta_code_koers"></select>
+                    <button id="btn-get-valuta">Haal koers</button>
+                    <div class="koers-value">
+                        <h1>&euro; <span id="koers-waarde">0,00</span></h1>
+                    </div>
+                </div>
+                <div class="row row-2">
+                    <!-- Omrekenen van de waarde van één valuta naar de ander -->
+                    <h3>Omrekenen</h3>
+
+                    <div class="form-element">
+                        <label for="valuta_code_van">Van valuta</label>
+                        <select id="valuta_code_van"></select>
+                    </div>
+                    
+                    <div class="form-element">
+                        <label for="valuta_amount">Bedrag</label>
+                        <input type="text" value="0.00" id="valuta_amount" />
+                    </div>
+                    
+                    <div class="form-element">
+                        <label for="valuta_code_to">Naar valuta</label>
+                        <select id="valuta_code_to"></select>
+                    </div>
+                    
+                    <button id="btn-calc-value">Bereken</button>
+
+                    <div class="calc-value">
+                        <h1><span id="calc-waarde">&euro; 0,00</span></h1>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kolom 2 bevat een tabel met alle geregistreerde valuta -->
+            <section class="column-2">
+                <h3>Overzicht alle valuta</h3>
+                <table class="currency-table">
+                    <thead>
+                        <tr>
+                            <th>Vlag</th>
+                            <th>Afk.</th>
+                            <th>Naam</th>
+                            <th>Land</th>
+                            <th>Koers</th>
+                        </tr>
+                    </thead>
+                    <tbody id="valuta-table">
+
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>
